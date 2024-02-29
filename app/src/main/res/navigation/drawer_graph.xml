@@ -10,4 +10,9 @@
         android:name="com.sandhyagill.drawerapp.ProfileFragment"
         android:label="fragment_profile"
         tools:layout="@layout/fragment_profile" />
+    <fragment
+        android:id="@+id/uploadProductFragment"
+        android:name="com.sandhyagill.drawerapp.UploadProductFragment"
+        android:label="fragment_upload_product"
+        tools:layout="@layout/fragment_upload_product" />
 </navigation>
