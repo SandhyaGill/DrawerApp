@@ -39,6 +39,7 @@ class ProfileFragment : Fragment() {
         // Inflate the layout for this fragment
         binding = FragmentProfileBinding.inflate(layoutInflater)
         return binding.root
+
     }
 
     companion object {

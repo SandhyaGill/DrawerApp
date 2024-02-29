@@ -23,6 +23,19 @@ class MainActivity : AppCompatActivity() {
         binding.drawerLayout.addDrawerListener(actionBarDrawerToggle)
         actionBarDrawerToggle.syncState()
 
+        supportActionBar?.setDisplayHomeAsUpEnabled(true)
+        supportActionBar?.setDisplayShowHomeEnabled(true)
+
+        override fun onSupportNavigateUp(): Boolean {
+
+            if (binding.drawerLayout.isDrawerOpen(binding.sideNavigation)) {
+                binding.drawerLayout.closeDrawer(binding.sideNavigation)
+            } else {
+                onBackPressed()
+            }
+            return true
+        }
+
         binding.sideNavigation.setNavigationItemSelectedListener {
             when(it.itemId){
                R.id.menuProfile->{
